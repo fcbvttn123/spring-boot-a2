@@ -24,6 +24,11 @@ public class PostController {
 		return ps.findAll();
 	}
 	
+	@GetMapping("/sorted")
+    public List<Post> getAllPostsSortedByDatePostedDesc() {
+        return ps.findAllByOrderByDatePostedDesc();
+    }
+	
 	@PostMapping(value = {"", "/"})
 	public Post insertPost(@RequestBody Post p) {
 		return ps.save(p);

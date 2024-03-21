@@ -1,5 +1,6 @@
 package ca.sheridancollege.vutran.services;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,6 +43,7 @@ public class PostServiceImpl implements PostService {
 	@Override
 	public Post save(Post post) {
 		// TODO Auto-generated method stub
+		post.setDatePosted(LocalDate.now());
 		return pr.save(post);
 	}
 
