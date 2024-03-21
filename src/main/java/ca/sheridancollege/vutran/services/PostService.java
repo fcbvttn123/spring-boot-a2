@@ -8,6 +8,7 @@ import ca.sheridancollege.vutran.domain.Post;
 public interface PostService {
 	public List<Post> findAll();
 	public List<Post> findAllByOrderByDatePostedDesc();
+	public List<Post> findAllByOrderByTimePostedDesc();
 	public Post findById(Long id);
 	public List<Post> findByTopic(String topic);
 	public Post save(Post post);

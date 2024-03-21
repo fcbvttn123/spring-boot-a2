@@ -1,6 +1,7 @@
 package ca.sheridancollege.vutran.domain;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,4 +23,5 @@ public class Post {
 	private String topic;
 	private String content;
 	private LocalDate datePosted; 
+	private LocalTime timePosted;
 }

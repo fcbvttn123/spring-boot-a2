@@ -12,4 +12,5 @@ import ca.sheridancollege.vutran.domain.Post;
 public interface PostRepository extends JpaRepository<Post, Long> {
 	public List<Post> findByTopic(String topic);
 	public List<Post> findAllByOrderByDatePostedDesc();
+	public List<Post> findAllByOrderByTimePostedDesc();
 }
