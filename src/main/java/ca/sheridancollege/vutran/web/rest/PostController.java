@@ -21,7 +21,7 @@ public class PostController {
 	
 	@GetMapping(value = {"", "/"})
 	public List<Post> getAllPosts() {
-		return ps.findAll();
+		return ps.findAllByOrderByTimePostedDesc();
 	}
 	
 	@GetMapping("/sorted")
@@ -58,9 +58,3 @@ public class PostController {
  }
 ]
 */
-
-
-
-
-// Boostrap Data
-// H2 DB

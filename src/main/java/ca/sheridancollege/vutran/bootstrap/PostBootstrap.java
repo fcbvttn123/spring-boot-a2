@@ -1,6 +1,7 @@
 package ca.sheridancollege.vutran.bootstrap;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -19,8 +20,8 @@ public class PostBootstrap implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		
-		//Post p1 = new Post("David", "David Post", "Post Content 1", LocalDate.of(2019, 3, 27));
-
+		Post post = new Post((long)1, "David", "First Topic", "Topic's Content", LocalDate.now(), LocalTime.now());
+		ps.save(post);
+		
 	}
-
 }

@@ -1,0 +1,10 @@
+<ul class="list-group">
+	@for (post of posts; track post.id) {
+		<li class="list-group-item">
+			<h1>{{ post.author }} - {{ post.topic }}</h1>
+			<p>{{ post.content }}</p>
+			<p>Posted on: {{ post.datePosted }}</p>
+			<p>Time Posted: {{ post.timePosted }}</p>
+		</li>
+	}
+</ul>
